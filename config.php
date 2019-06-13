@@ -1,6 +1,6 @@
 <?php
-//Chamando meuarquivo deconfiguração para alterna entre servidor 
-//local e servidor pago
+//Chamando meu arquivo de configuração para alternar entre servidores
+//local e servidor pago(dedicado)
 require 'environment.php';
 
 //Iniciando array vazio
@@ -15,8 +15,8 @@ if(ENVIRONMENT == "development") {
     define("BASE_URL", "http://localhost/estoque/");
     $config['dbname'] = "estoque";
     $config['host'] = 'localhost';
-    $config['dbuser'] = 'SeuUsuario';
-    $config['dbpass'] = 'SuaSenha';
+    $config['dbuser'] = 'root';
+    $config['dbpass'] = 'root';
     
 } else {
     //Nesse caso se não for local for um servidor pago

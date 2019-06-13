@@ -8,3 +8,5 @@ A base de dados esta com o DER do banco também, para testar precisa colocar os 
 do banco de dados de vocês, pois esta com o meu que fiz localmente.
 
 O banco doi feito com MYSQL usando phpmyadmin, o nome do arquivo do banco é estoque extensão SQL
+
+OBS. O editor usando foi o sublime Text, então a formatação está de acordo com o sublime.

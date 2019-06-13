@@ -23,7 +23,7 @@ class Core {
                 array_shift($url);
                 
             } else {
-                //Colocando 'index' na primeira Action
+                //Colocando 'index' na Action
                 $currentAction = 'index';
                 
             }
@@ -53,7 +53,7 @@ class Core {
         $c = new $currentController();
 
 
-       call_user_func_array(array($c, $currentAction), $params); // executa a action
+       call_user_func_array(array($c, $currentAction), $params); // executa a Action
         
     }
     

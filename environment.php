@@ -1,4 +1,4 @@
 <?php
-//Definindo as configurações entre servidores localis e pagos(dedicados)
+//Definindo as configurações entre servidores locais e pagos(dedicados)
 define("ENVIRONMENT", "development");
 

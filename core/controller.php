@@ -9,13 +9,13 @@ class controller {
         include 'views/'.$viewName.'.php';
         
     }
-    
+    //Chamando o tamplate
     public function loadTemplate($viewName, $viewData = array()) {
         
         include 'views/template.php';
         
     }
-    
+    //Chamando o tamplate
     public function loadViewInTemplate($viewName, $viewData = array()) {
         
         extract($viewData);

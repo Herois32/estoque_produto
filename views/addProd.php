@@ -1,4 +1,4 @@
-<?php if($error == 'exist'): ?>
+<?php if($error == 'exist'): //Se a URL não tiver error mostramos o conteúdo ?>
     <div class="alert alert-Warning">
   <strong>Código</strong> do Produo já existe</a>.
 </div>
@@ -11,9 +11,10 @@
 
 
 </br>
-
+<!-- Iniciando a class conteiner que vai formatar os componete na tele  -->
 <div class="container">
   <h3>Adicionar Produto Produto</h3>
+  <!-- Formulário de cadastramento dos produtos  -->
 <form method="POST" action="<?php echo BASE_URL; ?>addProdutos/add_save" class="form">
   <div class="form-group">
     <label for="codigo" >Código:</label>

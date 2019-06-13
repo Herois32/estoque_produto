@@ -1,11 +1,11 @@
 <?php
 
 /**
- * A QUI É A CLASSE DO MEU MODEL A CLASS PRODUTO
+ * A QUI É A CLASSE DO MEU MODEL - CLASS PRODUTO
  */
 class Produtos extends model{
 
-			//Metodo que vai pegar todos os dados do BD
+			//Metodo que vai pegar todos os registros do BD
 			public function getAll(){
 				
 				//Iniciando um array vazio
@@ -13,7 +13,7 @@ class Produtos extends model{
 				//Query que vai trazer todos os produtos
 				$sql = "SELECT * FROM produtos";
 				$sql = $this->db->query($sql);
-				//Caso tenha retorno no banco montar um array com todos os usuários
+				//Caso tenha retorno no banco montar um array com todos os registros
 				if($sql->rowCount() > 0){
 					$array = $sql->fetchAll();
 				}
@@ -72,7 +72,7 @@ class Produtos extends model{
 				$sql->execute();
 			}
 
-			//Medoto que deleto o produto conforme o ID passado por parâmentro 
+			//Medoto que deleta o produto conforme o ID passado por parâmentro 
 			public function delete($id){
 				$sql = "DELETE FROM produtos WHERE et_id = :et_id";
 				$sql = $this->db->prepare($sql);
@@ -82,7 +82,7 @@ class Produtos extends model{
 
 			//Uso esse metodo privado (ele só vai ser usado dentro da minha classe Produtos) 
 			//para verificar se o codigo já existe para o medoto add não adicione um código que
-			//ja tem no BD
+			//ja tem no BD. Posso chama esse metodo de metodo auxiliar.
 			private function codigoExiste($codigo){
 				$sql = "SELECT * FROM produtos WHERE et_codigo = :et_codigo";
 				$sql = $this->db->prepare($sql);
@@ -96,9 +96,9 @@ class Produtos extends model{
 				}
 			}
 
-			//Metodo que vai inserir os dados do arquivo XML
+			//Metodo que vai inserir os dados do arquivo XML para o BD
 			public function xml($xml){
-					//Contatos de dados que foi inserido inicnando com 0
+					//Contando quantos registro foram inserido. Ininando a variável com 0
 					$x = 0;
 					foreach ($xml as $produto){
 			   		 $sql = "INSERT INTO produtos (et_codigo, et_nome, et_preco, et_descricao) 
@@ -115,7 +115,6 @@ class Produtos extends model{
 				       		$x++;
 				    	}
 					}
-				//echo "$x contatos importados com sucesso!";
 				return true;
 			} 
 		

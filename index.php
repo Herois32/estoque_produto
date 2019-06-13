@@ -1,8 +1,12 @@
 <?php
+//Iniciando a sessão 
 session_start();
+//Habilitando para mostrar erros
 error_reporting(E_ALL ^ E_NOTICE);
+//Chamando o arquuivo de configuração do BD
 require 'config.php';
 
+//Aqui é o autoload que vai direcionar o usuário para a direção correspondente
 spl_autoload_register(function ($class) {
 
     if (file_exists('controllers/'.$class.'.php')) {
@@ -14,6 +18,8 @@ spl_autoload_register(function ($class) {
     }
 
 });
+
+//Iniciando o objeto 
 $core = new Core();
 $core->run();
 

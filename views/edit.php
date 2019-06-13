@@ -1,6 +1,7 @@
 <?php
 if(!empty($msg)) {
     echo $msg;
+    //Caso o usuário entra em uma pagina que não tem no controller espeficiamos um error para o mesmo
 }
 ?>
 
@@ -11,9 +12,10 @@ if(!empty($msg)) {
        
 
 </br>
-
+<!-- Iniciando a class conteiner que vai formatar os componete na tele  -->
 <div class="container">
   <h3>Editar Produto</h3>
+    <!-- Formulário  -->
 <form method="POST" >
   <div class="form-group">
     <label for="codigo" >Código:</label>
