@@ -9,7 +9,7 @@
         <div class="actions pull-left">
             <div class="btn-group">
                 <!-- Botão para adicionar novo produto -->
-                <a href="<?php echo BASE_URL; ?>addProdutos/addProd" class="btn btn-primary"> ADICIONAR</a>
+                <a href="<?php echo BASE_URL; ?>addProdutos/addProd" class="btn btn-primary">Adicionar</a>
                 <!-- Botão para acionar modal -->
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
             Importar XML
